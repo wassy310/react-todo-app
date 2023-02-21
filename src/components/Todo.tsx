@@ -14,17 +14,17 @@ const Todo = () => {
   const todosList = [
     {
       id: 1,
-      content: "店を予約する",
+      content: "content1",
       editing: false,
     },
     {
       id: 2,
-      content: "卵を買う",
+      content: "content2",
       editing: false,
     },
     {
       id: 3,
-      content: "郵便を出す",
+      content: "content3",
       editing: false,
     },
   ];
@@ -51,7 +51,6 @@ const Todo = () => {
 
   return (
     <>
-      // 各々に必要なPropsを渡す
       <List todos={todos} deleteTodo={deleteTodo} updateTodo={updateTodo} />
       <Form createTodo={createTodo} />
     </>
