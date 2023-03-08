@@ -3,6 +3,11 @@
 ## Overview
 
 ## Getting Started
+- `git clone https://github.com/wassy310/react-todo-app`
+- `cd todo-app`
+- `npm install`
+- `npm run dev`
+ターミナルに出力された'http://localhost:5173'か`o`と入力すると、Reactアプリが立ち上がります
 
 ## Environments
 |        |                                        |
@@ -14,4 +19,4 @@
 [Wassy | Ryoga Washizawa](https://github.com/wassy310)
 
 ## Contact
-Bugs and feature requests please visit [GitHub Issues](https://github.com/wassy310/react-todo-app/issues).
+[GitHub Issues](https://github.com/wassy310/react-todo-app/issues).
