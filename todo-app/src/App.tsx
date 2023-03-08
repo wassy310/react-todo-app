@@ -36,7 +36,18 @@ export const App = () => {
       }
       return todo;
     });
+    setTodos(newTodos);
+  };
 
+  const handleCheck = (id: number, checked: boolean) => {
+    const deepCopy = todos.map((todo) => ({ ...todo }));
+
+    const newTodos = deepCopy.map((todo) => {
+      if (todo.id == id) {
+        todo.checked = !checked;
+      }
+      return todo;
+    });
     setTodos(newTodos);
   };
 
@@ -66,10 +77,11 @@ export const App = () => {
               <input
                 type = "checkbox"
                 checked = {todo.checked}
-                onChange = {() => console.log('checked')}
+                onChange = {() => handleCheck(todo.id, todo.checked)}
               />
               <input
                 type = "text"
+                disabled = {todo.checked}
                 value = {todo.value}
                 onChange = {(e) => handleEdit(todo.id, e.target.value)}
               />
