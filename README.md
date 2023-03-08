@@ -6,8 +6,8 @@
 - `git clone https://github.com/wassy310/react-todo-app`
 - `cd todo-app`
 - `npm install`
-- `npm run dev`
-ターミナルに出力された'http://localhost:5173'か`o`と入力すると、Reactアプリが立ち上がります
+- `npm run dev`  
+ターミナルに出力された[http://localhost:5173]か`o`と入力すると、Reactアプリが立ち上がります
 
 ## Environments
 |        |                                        |
