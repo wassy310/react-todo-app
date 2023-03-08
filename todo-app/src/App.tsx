@@ -67,6 +67,12 @@ export const App = () => {
 
   return (
     <div>
+      <select defaultValue="all" onChange={(e) => e.preventDefault()}>
+        <option value="all">すべてのタスク</option>
+        <option value="checked">完了したタスク</option>
+        <option value="unchecked">現在残っているタスク</option>
+        <option value="removed">ゴミ箱</option>
+      </select>
       <form
         onSubmit={(e) => {
           e.preventDefault();
