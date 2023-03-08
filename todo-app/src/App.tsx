@@ -41,6 +41,11 @@ export const App = () => {
           onSubmit = {handleSubmit}
         />
       </form>
+      <ul>
+        {todos.map((todo) => {
+          return <li>{todo.value}</li>;
+        })}
+      </ul>
     </div>
   );
 };
