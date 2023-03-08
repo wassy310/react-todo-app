@@ -1,6 +1,7 @@
 # Todo App
 
 ## Overview
+Reactで作成されたTodoアプリ
 
 ## Getting Started
 - `git clone https://github.com/wassy310/react-todo-app`
