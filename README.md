@@ -9,9 +9,6 @@
 |  :-:   | -------------------------------------- |
 | OS     | Windows 10 Pro                         |
 | IDE    | Visual Studio Code                     |
-| OTHERS |                                        |
-
-## Libraries
 
 ## Author
 [Wassy | Ryoga Washizawa](https://github.com/wassy310)
