@@ -7,7 +7,7 @@
 - `cd todo-app`
 - `npm install`
 - `npm run dev`  
-ターミナルに出力された[http://localhost:5173]か`o`と入力すると、Reactアプリが立ち上がります
+ターミナルに出力された[http://localhost:5173](http://localhost:5173/)をクリックするか`o`と入力すると、Reactアプリが立ち上がります
 
 ## Environments
 |        |                                        |
