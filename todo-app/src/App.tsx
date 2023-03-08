@@ -4,6 +4,7 @@ type Todo = {
   value: string;
   readonly id: number;
   checked: boolean;
+  removed: boolean;
 };
 
 export const App = () => {
@@ -15,12 +16,13 @@ export const App = () => {
   };
 
   const handleSubmit = () => {
-    if (!text) return;
+    if(!text) return;
 
     const newTodo: Todo = {
       value: text,
       id: new Date().getTime(),
       checked: false,
+      removed: false,
     };
 
     setTodos([newTodo, ...todos]);
@@ -31,7 +33,7 @@ export const App = () => {
     const deepCopy = todos.map((todo) => ({ ...todo }));
 
     const newTodos = deepCopy.map((todo) => {
-      if (todo.id == id) {
+      if(todo.id == id) {
         todo.value = value;
       }
       return todo;
@@ -43,7 +45,7 @@ export const App = () => {
     const deepCopy = todos.map((todo) => ({ ...todo }));
 
     const newTodos = deepCopy.map((todo) => {
-      if (todo.id == id) {
+      if(todo.id == id) {
         todo.checked = !checked;
       }
       return todo;
@@ -51,7 +53,7 @@ export const App = () => {
     setTodos(newTodos);
   };
 
-  return (
+  return(
     <div>
       <form
         onSubmit = {(e) => {
@@ -72,7 +74,7 @@ export const App = () => {
       </form>
       <ul>
         {todos.map((todo) => {
-          return (
+          return(
             <li key = {todo.id}>
               <input
                 type = "checkbox"
@@ -85,6 +87,7 @@ export const App = () => {
                 value = {todo.value}
                 onChange = {(e) => handleEdit(todo.id, e.target.value)}
               />
+              <button onClick = {() => console.log('removed')}>削除</button>
             </li>
           );
         })}
