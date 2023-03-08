@@ -25,6 +25,16 @@ export const App = () => {
     setText('');
   };
 
+  const handleEdit = (id: number, value: string) => {
+    const newTodos = todos.map((todo) => {
+      if (todo.id == id) {
+        todo.value = value;
+      }
+      return todo;
+    });
+    setTodos(newTodos);
+  };
+
   return (
     <div>
       <form
@@ -51,7 +61,7 @@ export const App = () => {
               <input
                 type = "text"
                 value = {todo.value}
-                onChange = {(e) => e.preventDefault()}
+                onChange = {(e) => handleEdit(todo.id, e.target.value)}
               />
             </li>
           );
